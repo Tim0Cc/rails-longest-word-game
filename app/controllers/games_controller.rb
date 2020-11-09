@@ -11,6 +11,7 @@ class GamesController < ApplicationController
     @guess = params[:guess]
     if @guess.split('').all? { |letter| @letters.include?(letter) }
     elsif
+      @guess.lang ==
     else
     end
   end
